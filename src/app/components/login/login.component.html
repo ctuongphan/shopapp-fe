@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form mx-auto">
+                <h1 class="login-header">Login</h1>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" 
+                        [(ngModel)]="phoneNumber"
+                            (input)="onPhoneNumberChange()"
+                            name="phone"
+                            (focus)="loginForm.form.markAsTouched()"
+                    id="phoneNumber">
+                    <div class="divider-nospace"></div>
+                </div>
+                <div class="mt-5"></div>
+                <div class="form-group password-field">
+                    <label for="password">Password</label>
+                    <input type="{{ showPassword ? 'text' : 'password' }}"
+                        [(ngModel)]="password"                            
+                        name="password"
+                        placeholder="At least 3 characters" 
+                        class="form-control" id="password">
+                    <i class="password-toggle fas" [ngClass]="showPassword ? 
+                        'fa-eye' : 'fa-eye-slash'" (click)="togglePassword()"></i>
+                    <div class="divider-nospace"></div>
+                </div>                
+                <div class="form-group">
+                    <div class="form-check checkbox-text">
+                      <span style="display: flex;">
+                        <input type="checkbox" 
+                            class="form-check-input" 
+                            id="remember" 
+                            [(ngModel)]="rememberMe">
+                        <label class="form-check-label text-start" for="remember">
+                            Remember to sign in</label>
+                      </span>
+                      <a href="#" class="register-link">Forgot password</a>
+                    </div>
+                  </div>
+                  
+
+                  
+                  <button 
+                    type="button" 
+                    (click)="login()"
+                    class="login-button">Login</button>
+
+                    <div class="button-group flex justify-center mt-2">
+                        <button class="btn-google" (click)="continueWithGoogle()">
+                          <i class="fab fa-google" style="margin-right: 5px"></i>
+                          Continue with Google
+                        </button>
+                        <button class="btn-facebook" >
+                          <i class="fab fa-facebook" style="margin-right: 5px"></i>
+                          Continue with Facebook
+                        </button>
+                      </div>
+
+                  <div class="divider"></div>
+                  <p class="text-center">Not registered? <span>
+                    <a class="register-link" 
+                        (click)="createAccount()">Creat new account</a>
+                </span></p>                                                     
+        
+    </div>   
+</div>
+</div>
+</div>
+<app-footer></app-footer>

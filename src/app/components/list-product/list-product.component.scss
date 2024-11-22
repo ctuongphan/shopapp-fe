@@ -1,0 +1,103 @@
+@import '../../styles/shared-styles.scss';
+
+.list-product {
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+}
+swiper-slide{
+    width: 0;
+}
+.product-item {
+    background-color: rgb(245, 240, 240);
+    border: 0.5px solid rgb(194, 194, 194);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    min-height: 390px;
+    min-width: 250px;
+    max-width: 290px;
+}
+.product-item:hover {
+    transform: translateY(-8px); /* Di chuyển lên một số pixel khi hover vào */
+    box-shadow: 0 0 5px cyan,
+    0 0 15px cyan,
+;
+} 
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.product-warranty {
+    color: $shopapp-tint-color;
+}
+
+.product-price {
+    bottom: 0;
+}
+
+.product-rating {
+    color: #FFD700;
+    margin-top: 10px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.space-x {
+    margin: 0 5px;
+    /*margin-top, margin-right, margin-bottom, margin-left*/
+}
+
+.page-number {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
+.page-number.active {
+    background-color: $shopapp-color !important;
+    color: #fff;
+    border-color: $shopapp-color !important;
+}
+.btn-primary {
+    background-color: $shopapp-color;
+    border-color: $shopapp-color;    
+}
+.btn.btn-primary {
+    margin-left: 10px;
+}
+  
+.owl-slide-baner img{
+    border-radius: 5px;
+}
+
+
+.title{
+    color: #ccc;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+    font-family: SF Pro Display, sans-serif;
+}
+
+swiper-container{
+    padding: 10px 0;
+}
